@@ -1,4 +1,7 @@
 <?php
+
+require_once( TEMPLATEPATH . '/inc/redux.php' );
+
 // Register your menus
 function gatsby_theme_custom_menus() {
     $locations = array(
@@ -8,5 +11,5 @@ function gatsby_theme_custom_menus() {
     register_nav_menus( $locations );
  }
 
-// Hook them into the theme-'init' action
+// Hook them into the theme 'init' action
 add_action( 'init', 'gatsby_theme_custom_menus' );
